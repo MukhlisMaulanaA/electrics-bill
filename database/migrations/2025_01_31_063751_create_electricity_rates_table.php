@@ -13,7 +13,7 @@ return new class extends Migration {
     Schema::create('electricity_rates', function (Blueprint $table) {
       $table->id();
       $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
-      $table->string('rate_code', 4);
+      $table->string('rate_code', 4)->default(0000);
       $table->integer('fixed_charge')->unsigned();
       $table->integer('rate_per_kwh')->unsigned();
       $table->timestamps();

@@ -14,8 +14,8 @@ return new class extends Migration {
       $table->id();
       $table->foreignId('user_id')->unique()->constrained('users')->onDelete('cascade');
       $table->foreignId('electricity_rate_id')->constrained('electricity_rates')->onDelete('cascade');
-      $table->string('customer_code')->unique();
-      $table->text('address');
+      $table->string('customer_code')->unique()->default('CUST00');
+      $table->text('address')->nullable();
       $table->timestamps();
     });
   }

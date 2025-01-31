@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
       'user_id' => $customerUser->id,
       'electricity_rate_id' => $electricityRate1->id,
       'customer_code' => 'CUST001',
-      'address' => '123 Customer Street',
+      'address' => 'Jakarta',
     ]);
 
   }
